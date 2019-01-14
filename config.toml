@@ -2,3 +2,16 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
+
+[mediaTypes]
+  [mediaTypes."text/markdown"] # The "text/markdown" here is a Type
+    suffixes = ["mdown"] # This is a collection of Suffix. Value used for URLs and filenames of this Type
+
+[outputFormats]
+	[outputFormats.Markdown]
+		mediaType = "text/markdown"
+    isPlainText = true
+    baseName = "readme" # default is `index`
+
+[outputs]
+  page = ["markdown"]
